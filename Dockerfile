@@ -1,6 +1,4 @@
 FROM n8nio/n8n:latest
 
-# Let Railway inject all environment variables
-EXPOSE 5678
-
-CMD ["start"]
+# Use entrypoint script to inject Railway env vars
+CMD ["n8n", "start"]
